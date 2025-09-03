@@ -99,7 +99,7 @@ class BookView(QWidget):
             self.table.setItem(row, 0, QTableWidgetItem(str(book.id)))
             self.table.setItem(row, 1, QTableWidgetItem(book.title))
             self.table.setItem(row, 2, QTableWidgetItem(book.author))
-            self.table.setItem(row, 3, QTableWidgetItem(book.published_date.strftime("%Y-%m-%d")))
+            self.table.setItem(row, 3, QTableWidgetItem(str(book.published_date)))
             self.table.setItem(row, 4, QTableWidgetItem(book.genre))
 
     def display_book(self, book: BookEntity):

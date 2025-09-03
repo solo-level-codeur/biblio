@@ -1,0 +1,13 @@
+# Configuration de la base de données - EXEMPLE
+# Créez un fichier .env à la racine du projet avec ces variables :
+
+DB_HOST=localhost
+DB_DATABASE=biblio_db
+DB_USER=root
+DB_PASSWORD=root
+
+# Instructions :
+# 1. Créez un fichier .env à la racine du projet
+# 2. Copiez ces lignes dans le fichier .env
+# 3. Modifiez les valeurs selon votre configuration MySQL/MAMP/XAMPP
+# 4. Exécutez le script database_setup.sql dans votre serveur MySQL

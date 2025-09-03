@@ -52,11 +52,11 @@ class BookRepository:
             cursor.execute(query)
             books = cursor.fetchall()
             return [BookEntity(
-                book["id"],
-                book["title"],
-                book["author"],
-                book["published_date"],
-                book["genre"]
+                id=book["id"],
+                title=book["title"],
+                author=book["author"],
+                published_date=book["published_date"],
+                genre=book["genre"]
                 ) for book in books]
         except Error as e:
             print(f"Erreur lors de la récupération des livres : {e}")
@@ -74,11 +74,11 @@ class BookRepository:
             cursor.execute(query, (book_id,))
             book = cursor.fetchone()
             return BookEntity(
-                book["id"],
-                book["title"],
-                book["author"],
-                book["published_date"],
-                book["genre"]
+                id=book["id"],
+                title=book["title"],
+                author=book["author"],
+                published_date=book["published_date"],
+                genre=book["genre"]
                 ) if book else None
         except Error as e:
             print(f"Erreur lors de la récupération du livre : {e}")
